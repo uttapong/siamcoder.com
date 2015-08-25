@@ -1,0 +1,29 @@
+{
+  "name": "siamcoder.com",
+  "version": "0.1.1",
+  "authors": [
+    "uttapong"
+  ],
+  "description": "siamcoder.com web site",
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "coderthai",
+    "web",
+    "develop",
+    "design",
+    "js",
+    "html5",
+    "html"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.siamcoder.com",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "modernizr": "~2.8.3",
+    "livereload": "~2.2.1"
+  }
+}
