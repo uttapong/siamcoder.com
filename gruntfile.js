@@ -78,7 +78,7 @@ module.exports = function(grunt) {
     		}
     	}
     },*/
-    
+
     mochaTest: {
       src: watchFiles.mochaTests,
       options: {
@@ -118,7 +118,9 @@ module.exports = function(grunt) {
     sass: { // Task
       dist: {
         files: { // Dictionary of files
-          'css/style.css': 'css/sass/style.scss' // 'destination': 'source'
+          'css/style.css': 'css/sass/style.scss',
+          'css/bootstrap.css':'css/sass/bootstrap/bootstrap.scss',
+          'css/test.css':'css/sass/test.scss' // 'destination': 'source'
         }
       }
     }
