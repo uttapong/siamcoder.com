@@ -16,6 +16,14 @@
   font-weight: 200;
   margin: 0px 5px; }
 
+header {
+  background: #00a8c6;
+  background: -moz-linear-gradient(30deg, #00a8c6 0%, #40c0cb 100%);
+  background: -webkit-linear-gradient(30deg, #00a8c6 0%, #40c0cb 100%);
+  background: -o-linear-gradient(30deg, #00a8c6 0%, #40c0cb 100%);
+  background: -ms-linear-gradient(30deg, #00a8c6 0%, #40c0cb 100%);
+  background: linear-gradient(120deg, #00a8c6 0%, #40c0cb 100%); }
+
 .navbar {
   margin: 10px 0 0px 0; }
 
@@ -50,7 +58,6 @@
     background-size: 100%; }
 
   header {
-    background: url(../images/header_bg.jpg) top center no-repeat;
     height: 400px;
     background-size: cover;
     margin-bottom: 30px; }
@@ -66,7 +73,6 @@
     background-size: 100% !important; }
 
   header {
-    background: url(../images/header_bg.jpg) top center no-repeat;
     height: 650px;
     background-size: cover;
     margin-bottom: 30px; } }

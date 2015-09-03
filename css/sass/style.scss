@@ -1,5 +1,7 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
+$header_bg1: rgb(0, 168, 198);
+$header_bg2: rgb(64, 192, 203);
 
 .nav a:hover{
   background-color: #444 !important;
@@ -19,6 +21,14 @@ color: #fff !important;
   border-radius: 100px;
   font-weight: 200;
   margin: 0px 5px;
+}
+header{
+  background:$header_bg1 ;
+background: -moz-linear-gradient(30deg, $header_bg1 0%, $header_bg2 100%);
+background: -webkit-linear-gradient(30deg, $header_bg1 0%, $header_bg2 100%);
+background: -o-linear-gradient(30deg, $header_bg1 0%, $header_bg2 100%);
+background: -ms-linear-gradient(30deg, $header_bg1 0%, $header_bg2 100%);
+background: linear-gradient(120deg, $header_bg1 0%, $header_bg2 100%);
 }
 
 .navbar{
@@ -61,7 +71,6 @@ color: #fff !important;
   }
 
   header{
-    background: url(../images/header_bg.jpg) top center no-repeat;
     height: 400px;
     background-size: cover;
       margin-bottom: 30px;
@@ -81,7 +90,6 @@ color: #fff !important;
   background-size: 100% !important;
   }
   header{
-    background: url(../images/header_bg.jpg) top center no-repeat;
     height: 650px;
     background-size: cover;
       margin-bottom: 30px;
