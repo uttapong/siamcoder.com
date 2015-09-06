@@ -12,6 +12,16 @@ module.exports = function(grunt) {
   // Project Configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    express: {
+        all: {
+            options: {
+                bases: ['.'],
+                port: 8080,
+                hostname: "localhost",
+                livereload: true
+            }
+        }
+    },
     watch: {
       clientViews: {
         files: watchFiles.clientViews,
@@ -35,7 +45,7 @@ module.exports = function(grunt) {
       },*/
       clientSASS: {
         files: watchFiles.clientSASS,
-        tasks: ['less'],
+        tasks: ['sass'],
         options: {
           livereload: true,
         }
@@ -101,6 +111,14 @@ module.exports = function(grunt) {
         }
       }
     },
+    concurrent: {
+			default: [ 'watch'],
+			debug: ['nodemon', 'watch', 'node-inspector'],
+			options: {
+				logConcurrentOutput: true,
+				limit: 10
+			}
+		},
     mongobackup: {
       options: {
         host: 'localhost',
@@ -143,7 +161,7 @@ module.exports = function(grunt) {
   });
 
   // Default task(s).
-  grunt.registerTask('default', [ 'sass']);
+  grunt.registerTask('default', [ 'express','watch','sass']);
 
   // Debug task.
   grunt.registerTask('debug', ['lint', 'concurrent:debug']);
