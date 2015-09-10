@@ -112,7 +112,7 @@ module.exports = function(grunt) {
       }
     },
     concurrent: {
-			default: [ 'watch'],
+			default: [ 'watch','sass'],
 			debug: ['nodemon', 'watch', 'node-inspector'],
 			options: {
 				logConcurrentOutput: true,
@@ -161,8 +161,8 @@ module.exports = function(grunt) {
   });
 
   // Default task(s).
-  grunt.registerTask('default', [ 'express','watch','sass']);
-
+  //grunt.registerTask('default', [ 'express','watch','sass']);
+  grunt.registerTask('default', [ 'concurrent:default']);
   // Debug task.
   grunt.registerTask('debug', ['lint', 'concurrent:debug']);
 
