@@ -2,6 +2,13 @@ $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
 $header_bg1: rgb(0, 168, 198);
 $header_bg2: rgb(64, 192, 203);
+$white-font-color: #fff;
+
+
+@font-face {
+    font-family: thaisans;
+    src: url('../fonts/ThaiSansNeue-ExtraLight.otf');
+}
 
 .nav a:hover{
   background-color: #444 !important;
@@ -24,6 +31,7 @@ color: #fff !important;
 }
 header{
   background:$header_bg1 ;
+  color: $white-font-color;
 background: -moz-linear-gradient(30deg, $header_bg1 0%, $header_bg2 100%);
 background: -webkit-linear-gradient(30deg, $header_bg1 0%, $header_bg2 100%);
 background: -o-linear-gradient(30deg, $header_bg1 0%, $header_bg2 100%);
@@ -51,13 +59,18 @@ background: linear-gradient(120deg, $header_bg1 0%, $header_bg2 100%);
 }
 .brand{
   font-family: 'Patua One', cursive;
-  font-size: 3rem;
+  font-size: 1.6rem;
   color: #1BBC9B !important;
   font-weight: bold;
 
 }
 .feature-icon{
   width: 100%;
+  text-align: center;
+  margin: 10px 0 30px 0;
+}
+.feature-icon img{
+  width: 50%;
   text-align: center;
   margin: 10px 0 30px 0;
 }
@@ -73,7 +86,6 @@ background: linear-gradient(120deg, $header_bg1 0%, $header_bg2 100%);
   header{
     height: 400px;
     background-size: cover;
-      margin-bottom: 30px;
   }
 
   .rowblock{
